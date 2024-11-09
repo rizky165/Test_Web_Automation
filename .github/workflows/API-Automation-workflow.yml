@@ -49,6 +49,7 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3.7.3
       with:
         PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PUBLIS_BRANCH : test-reports
         PUBLISH_DIR: reports  
       
     
