@@ -33,6 +33,7 @@ public class Utility {
         //option addArguments("---headless---);
         options.addArguments("--no sandbox");
         options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--headless"); // Uncomment this line if running in a headless environment
         options.addArguments("--remote-allow-origins");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
