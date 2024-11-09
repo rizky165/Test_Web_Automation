@@ -1,6 +1,6 @@
 Feature: Test Automation Web
 
-  @Web
+  @web
   Scenario: Test login web normal
     Given open web login page
     And user input username "standard_user"
@@ -8,6 +8,7 @@ Feature: Test Automation Web
     And user click button login
     And user will see icon cart
 
+  @web
   Scenario: Test login web wrong password
     Given open web login page
     And user input username "standard_user"
@@ -15,7 +16,7 @@ Feature: Test Automation Web
     And user click button login
     And user will see error message "Username and password do not match any user in this service"
 
-  @Web
+  @web
   Scenario: Test login web with locked user
     Given open web login page
     And user input username "locked_out_user"
@@ -23,7 +24,7 @@ Feature: Test Automation Web
     And user click button login
     And user will see error message "Sorry, this user has been locked out."
 
-  @Web
+  @web
   Scenario: Test login web add item
     Given open web login page
     And user input username "standard_user"
@@ -38,7 +39,7 @@ Feature: Test Automation Web
     And user remove item
     Then verify cart item is match "1"
 
-  @Web
+  @web
   Scenario: Test web checkout item
     Given open web login page
     And user input username "standard_user"
@@ -56,6 +57,7 @@ Feature: Test Automation Web
     And user click finish button
     Then user will see message "Thank you for your order!"
 
+    @web
   Scenario: Test web checkout without an item
     Given open web login page
     And user input username "standard_user"
@@ -72,7 +74,7 @@ Feature: Test Automation Web
     And user click finish button
     Then user will see message "Thank you for your order!"
 
-  @Web
+  @web
   Scenario: Test web checkout item without input information
     Given open web login page
     And user input username "standard_user"
@@ -85,7 +87,7 @@ Feature: Test Automation Web
     And user click continue button
     Then user will see error message "First Name is required"
 
-  @Web
+  @web
   Scenario: Test web checkout item only input firstname
     Given open web login page
     And user input username "standard_user"
@@ -99,6 +101,7 @@ Feature: Test Automation Web
     And user click continue button
     Then user will see error message "Last Name is required"
 
+  @web
   Scenario: Test web checkout item only input firstname and last name
     Given open web login page
     And user input username "standard_user"
@@ -113,6 +116,7 @@ Feature: Test Automation Web
     And user click continue button
     Then user will see error message "Postal Code is required"
 
+  @web
   Scenario: Test web logout after login
     Given open web login page
     And user input username "standard_user"

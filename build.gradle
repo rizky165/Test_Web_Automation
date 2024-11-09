@@ -75,7 +75,7 @@ task cucumber() {
                     '--plugin', 'html:reports/index.html',
                     '--plugin', 'pretty',
                     '--glue', 'tests',
-                    '--tags', "${tags}",
+                    '--tags', "@web",
                     'src/test/java/features'
             ]
         }
