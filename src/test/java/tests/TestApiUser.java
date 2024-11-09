@@ -27,6 +27,6 @@ public class TestApiUser {
     @After
     public void after () throws InterruptedException{
         Thread.sleep(3000 );
-//        quitDriver();
+        quitDriver();
     }
 }
