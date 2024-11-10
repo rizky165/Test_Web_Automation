@@ -46,7 +46,7 @@ jobs:
     # Deploy to Github Pages
     - name: Deploy report to Github Pages
       if: always()
-      uses: ppeaceiris/actions-gh-pages@v4.0.0
+      uses: peaceiris/actions-gh-pages@v4.0.0
       with:
         PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         PUBLISH_DIR: reports  
